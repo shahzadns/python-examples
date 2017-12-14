@@ -1,15 +1,17 @@
 
 ### Courses
 
-I am learning Python Fundamentals from [CodeSchool.com](CodeSchool.com]) from their [Python path](https://www.codeschool.com/learn/python).
+I am learning Python Fundamentals from [Python Path](https://www.codeschool.com/learn/python) by [CodeSchool.com](https://www.codeschool.com/]).
 
 Following are the courses I have taken to learn the fundamentals.
 
 - Try Python (FREE)
 [link here](https://www.codeschool.com/learn/python)
 
-- Flying with Python (PREMIUM)
+- Flying through Python (PREMIUM)
 [link here](https://www.codeschool.com/courses/flying-through-python)
+
+They have two more courses that are on Django, will head to them once done with these.
 
 #### Topics
 
