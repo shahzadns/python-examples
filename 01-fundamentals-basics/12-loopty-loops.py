@@ -1,8 +1,8 @@
 # learn Python - 14-dec-17
-# 11 - Loopty Loops
+# 12 - Loopty Loops
 
 # ===============
-# 11.1 Loops and range
+# 12.1 Loops and range
 
 # with lists - pattern: for tempVar in list
 prices = [0.23, 0.56, 0.33]
@@ -50,7 +50,7 @@ for year in range(2005, 2012, 2):
     print('year is :', year)
 
 # ===============
-# 11.2 Spam Van menu
+# 12.2 Spam Van menu
 
 # loop with dictionaries
 menu_prices = {'foo': 12, 'bar': 13, 'baz': 50}
@@ -80,5 +80,51 @@ menu_prices.values()
 menu_prices.items()
 # [('baz', 50), ('foo', 12), ('bar', 13)]
 
+# ===============
+# 12.3 while loops
+
+x = 1
+while x <= 5:
+    print('count: ', x)
+    x += 1  # x++ does not work in python
+
+# ---
+# unlimited orders example
+menu = {'product x': '$55', 'product y': '$66'}
+orders = []
+order = input('What would you like to order? (Q to Quit)')
+
+while order.upper() != 'Q':
+    found = menu.get(order)
+    if found:
+        orders.append(order)
+    else:
+        print('Sorry, product does not exist.')
+
+    print('Anything else ? (Q to Quit)')
+
+print('your orders are:', orders)
+
+# ---
+# the "break" and "continue" keywords inside loop
+
+# game - guess the number
+import random
+
+num = random.randint(1, 10)
+
+guess = int(input('Guess a number between 1 and 10'))
+times = 1
+
+while guess != num:
+    guess = int(input('Guess again'))
+    times = times + 1
+
+    if times == 3:
+        break
+if guess == num:
+    print('You win!')
+else:
+    print('You lose! The number was ', num)
 
 # ===============
