@@ -72,16 +72,20 @@ def print_menu(menu):
 
 def get_order(menu):
     orders = []
-    order = input('What would you like to order? (Q to Quit)')
 
-    while order.upper() != 'Q':
+    while True:
+        # ask for the order
+        order = input('Can I take your order? (Q to Quit)')
+
+        # check if user wants to quit
+        if order.upper() != 'Q':
+            break
+
         found = menu.get(order)
         if found:
             orders.append(order)
         else:
             print('Sorry, product does not exist.')
-
-        print('Anything else ? (Q to Quit)')
 
     return orders
 

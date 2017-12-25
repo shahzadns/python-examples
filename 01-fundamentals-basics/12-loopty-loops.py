@@ -92,16 +92,21 @@ while x <= 5:
 # unlimited orders example
 menu = {'product x': '$55', 'product y': '$66'}
 orders = []
-order = input('What would you like to order? (Q to Quit)')
 
-while order.upper() != 'Q':
+while True:
+
+    # ask for the order
+    order = input('Can I take your order? (Q to Quit)')
+
+    # check if user wants to quit
+    if order.upper() != 'Q':
+        break
+
     found = menu.get(order)
     if found:
         orders.append(order)
     else:
         print('Sorry, product does not exist.')
-
-    print('Anything else ? (Q to Quit)')
 
 print('your orders are:', orders)
 
