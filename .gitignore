@@ -102,3 +102,4 @@ ENV/
 
 # PyCharm JetBrains IDE
 .idea
+.editorconfig
