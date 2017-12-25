@@ -48,9 +48,30 @@ print(my_file.readline())
 # can directly be use with loop
 dolar_menu = []
 for line in my_file:
-    dolar_menu.append(line.strip())  # strip exclude the \n
+    dolar_menu.append(line.strip())  # strip() removes all leading and trailing whitespace. e.g. \n
 
 my_file.close()
+
+# .split() of strings
+# >>> x = 'lorem-ipsum-dolar'
+# >>> x.split('-')
+# >>> ['lorem', 'ipsum', 'dolar']
+
+# multiple / direct assignments
+# >>> (a, b, c) = ['lorem', 'ipsum', 'dolar']
+# >>> a
+# >>> 'lorem'
+# similarly variable "b" will hold 'ipsum', and "c" will hold 'dolar'
+
+# playing together with string.split() and key-value pair assignments
+# taken from codeschool challenge
+# http://campus.codeschool.com/courses/flying-through-python/level/4/section/2/splitting-a-string
+
+schedule_file = open('schedule.txt', 'r')
+for line in schedule_file:
+    (show, time) = line.split(' - ')
+    print(show, time.strip())
+schedule_file.close()
 
 # ===============
 # 14.3 Try, Except
